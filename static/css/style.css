@@ -1,0 +1,412 @@
+/* Custom CSS for Construction Stock Management */
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+}
+
+/* Modern Category Cards */
+.modern-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+    border-radius: 16px !important;
+    backdrop-filter: blur(10px);
+}
+
+.modern-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15) !important;
+}
+
+.modern-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    opacity: 0.95;
+}
+
+.modern-card .card-body {
+    position: relative;
+    z-index: 3;
+}
+
+/* Professional Icon Styling */
+.icon-container {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.category-icon-main {
+    font-size: 3.5rem !important;
+    transition: all 0.4s ease;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.modern-card:hover .icon-container {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+}
+
+.modern-card:hover .category-icon-main {
+    transform: scale(1.1);
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.3));
+}
+
+/* Decorative Elements */
+.card-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.decoration-1 {
+    width: 60px;
+    height: 60px;
+    top: 10%;
+    right: 15%;
+    animation-delay: -2s;
+}
+
+.decoration-2 {
+    width: 40px;
+    height: 40px;
+    bottom: 20%;
+    left: 10%;
+    animation-delay: -4s;
+}
+
+.decoration-line {
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    top: 60%;
+    right: 20%;
+    animation: slideLine 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+        opacity: 0.3;
+    }
+    50% { 
+        transform: translateY(-20px) rotate(180deg); 
+        opacity: 0.7;
+    }
+}
+
+@keyframes slideLine {
+    0%, 100% { 
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    50% { 
+        transform: translateX(20px);
+        opacity: 1;
+    }
+}
+
+/* Gradient Variables */
+.from-blue-400 {
+    --gradient-start: #60a5fa;
+    --gradient-end: #2563eb;
+}
+
+.from-green-400 {
+    --gradient-start: #4ade80;
+    --gradient-end: #16a34a;
+}
+
+.from-red-400 {
+    --gradient-start: #f87171;
+    --gradient-end: #dc2626;
+}
+
+.from-yellow-400 {
+    --gradient-start: #facc15;
+    --gradient-end: #d97706;
+}
+
+.from-purple-400 {
+    --gradient-start: #c084fc;
+    --gradient-end: #9333ea;
+}
+
+.from-gray-400 {
+    --gradient-start: #9ca3af;
+    --gradient-end: #6b7280;
+}
+
+.category-card .btn {
+    transition: all 0.3s ease;
+}
+
+.category-card:hover .btn {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Stat Cards */
+.stat-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+/* Table Styles */
+.table-hover tbody tr:hover {
+    background-color: rgba(30, 64, 175, 0.05);
+}
+
+.table thead th {
+    border-bottom: 2px solid #1e40af;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Modal Styles */
+.modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+    border-radius: 12px 12px 0 0;
+}
+
+/* Form Styles */
+.form-control:focus {
+    border-color: #1e40af;
+    box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.25);
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-construction {
+    background-color: #1e40af;
+    border-color: #1e40af;
+    color: white;
+}
+
+.btn-construction:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+/* Alerts */
+.alert {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Cards */
+.card {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.card-header {
+    border-radius: 12px 12px 0 0;
+    font-weight: 600;
+}
+
+/* Badges */
+.badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-card {
+        min-height: 240px;
+    }
+    
+    .stat-card {
+        padding: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-only {
+        display: block !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .card {
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+    }
+    
+    .table {
+        border-collapse: collapse !important;
+    }
+    
+    .table th,
+    .table td {
+        border: 1px solid #ddd !important;
+    }
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #1e40af;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Utility Classes */
+.text-construction-blue {
+    color: #1e40af !important;
+}
+
+.text-construction-orange {
+    color: #ea580c !important;
+}
+
+.text-construction-gray {
+    color: #374151 !important;
+}
+
+.bg-construction-blue {
+    background-color: #1e40af !important;
+}
+
+.bg-construction-orange {
+    background-color: #ea580c !important;
+}
+
+.bg-construction-gray {
+    background-color: #374151 !important;
+}
+
+/* Hover Effects */
+.hover-shadow:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+.hover-lift:hover {
+    transform: translateY(-3px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e40af;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1d4ed8;
+}
