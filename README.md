@@ -35,8 +35,8 @@ This application is designed to solve the complexities of material tracking in c
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/ranaconcretesystem.git
-   cd ranaconcretesystem
+   git clone https://github.com/danishmalik7570-a11y/Construction-dashbaord-Invnetry-system.git
+   cd Construction-dashbaord-Invnetry-system
    ```
 
 2. **Set up a virtual environment:**
